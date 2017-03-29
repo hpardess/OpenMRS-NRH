@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="425px" Height="275px" backgroundColor="white" PageWidth="425" PageHeight="275" PageMargin="0">
+    <Item Width="200px" WidgetType="HorizontalLine" Left="2949px" Top="573px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="Label" Text="Hospital Logo" HelpText="Hospital Logo" Left="11px" Top="44px" fontSize="16px" fontFamily="Arial" color="red" fontWeight="bold" />
+    <Item WidgetType="Label" Text="Hospital Full Address" HelpText="Hospital Full Address" Left="135px" Top="44px" fontSize="16px" fontFamily="Arial" />
+    <Item Width="250px" Height="0px" WidgetType="HorizontalLine" Left="135px" Top="72px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="Label" Text="Patient ID Card" HelpText="Patient ID Card" Left="136px" Top="78px" fontSize="20px" fontFamily="Arial" fontWeight="bold" />
+    <Item WidgetType="Label" Text="Hospital Name" HelpText="Hospital Name" Left="134px" Top="14px" fontSize="20px" fontFamily="Arial" fontWeight="bold" />
+    <Item Width="400px" WidgetType="HorizontalLine" Left="12px" Top="109px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="Label" Text="Date of Birth        : " HelpText="Date of Birth : " Left="17px" Top="188px" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Gender                : " HelpText="Gender" Left="16px" Top="211px" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Registration Date :" HelpText="Registration Date :" Left="15px" Top="236px" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Family Name       : " HelpText="Family Name : " Left="16px" Top="164px" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name                  : " HelpText="Name" Left="17px" Top="139px" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="ID No. " HelpText="ID No. " Left="138px" Top="113px" fontSize="16px" fontFamily="Arial" fontWeight="bold" />
+    <PtPos>
+        <Item Text="identifier" HelpText="identifier" fontSize="16px" fontFamily="Arial" ID="2" XPOS="188px" YPOS="114px" Binding="identifier" color="black" fontWeight="bold" />
+        <Item Text="given_name" HelpText="given_name" fontSize="16px" fontFamily="Arial" ID="3" XPOS="150px" YPOS="141px" Binding="given_name" color="black" />
+        <Item Text="family_name" HelpText="family_name" fontSize="16px" fontFamily="Arial" ID="4" XPOS="151px" YPOS="165px" Binding="family_name" color="black" />
+        <Item Text="birthdate" HelpText="birthdate" fontSize="16px" fontFamily="Arial" ID="5" XPOS="151px" YPOS="188px" Binding="birthdate" color="black" />
+        <Item Text="gender" HelpText="gender" fontSize="16px" fontFamily="Arial" ID="6" XPOS="152px" YPOS="209px" Binding="gender" color="black" />
+        <Item Text="register_date" HelpText="register_date" fontSize="16px" fontFamily="Arial" ID="8" XPOS="151px" YPOS="235px" Binding="register_date" color="black" />
+    </PtPos>
+    <DesignItems>
+        <DesignItem id="1" name="Patient ID Card" type="0" sourceType="Grouping" description="A data set for printing Patient ID Card." binding="Patient-ID-Card">
+            <DesignItem id="2" name="identifier" type="1" sourceType="Custom" description="identifier" binding="identifier" text="identifier" />
+            <DesignItem id="8" name="register_date" type="1" sourceType="Custom" description="register_date" binding="register_date" text="register_date" />
+            <DesignItem id="3" name="given_name" type="1" sourceType="Custom" description="given_name" binding="given_name" text="given_name" />
+            <DesignItem id="4" name="family_name" type="1" sourceType="Custom" description="family_name" binding="family_name" text="family_name" />
+            <DesignItem id="5" name="birthdate" type="1" sourceType="Custom" description="birthdate" binding="birthdate" text="birthdate" />
+            <DesignItem id="6" name="gender" type="1" sourceType="Custom" description="gender" binding="gender" text="gender" />
+        </DesignItem>
+    </DesignItems>
+</Report>
