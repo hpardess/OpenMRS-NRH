@@ -1,0 +1,51 @@
+<htmlform formUuid="9da21a03-8649-4b84-8bed-70248fef9fe0" formName="Admission v2" formEncounterType="e22e39fd-7db2-45e7-80f1-60fa0d5a4378" formVersion="1.0">
+
+    <script type="text/javascript">
+        $(function() {
+            $('#location-container select').focus();
+        });
+    </script>
+
+    <h2><label><uimessage code="referenceapplication.simpleAdmission.title"/></label></h2>
+
+    <section id="admission">
+        <p>
+            <label><uimessage code="referenceapplication.simpleAdmission.admissionDate"/></label>
+            <encounterDate id="encounterDate" showTime="false" default="now"/>
+        </p>
+
+        <p>
+            <label><uimessage code="referenceapplication.simpleAdmission.admittingClinician"/></label>
+            <encounterProviderAndRole default="currentUser" encounterRole="1" required="true"/>
+        </p>
+
+        <p id="location-container">
+            <label><uimessage code="referenceapplication.simpleAdmission.admittedTo"/></label>
+            <encounterLocation required="true" tags="Admission Location"/>
+        </p>
+
+        <p>
+            <obs conceptId="1655" labelText="Reason for admission"/>
+        </p>
+
+        <p>
+            <obs conceptId="162879"  style="textarea" labelText="Reason for admission" rows="6" cols="60"/>
+        </p>
+
+        <p>
+            <obs conceptId="5219" labelText="Chief Complains"/>
+        </p>
+
+        <p>
+            <obs conceptId="160531" style="textarea" labelText="Chief Complains" rows="6" cols="60"/>
+        </p>
+
+    </section>
+
+    <submit submitClass="confirm right" submitCode="uicommons.saveForm" />
+
+    <ifMode mode="VIEW" include="false">
+        <button class="cancel"><uimessage code="uicommons.cancelForm"/></button>
+    </ifMode>
+
+</htmlform>
