@@ -1,4 +1,4 @@
-<htmlform formUuid="9da21a03-8649-4b84-8bed-70248fef9fe0" formName="Admission v2" formEncounterType="e22e39fd-7db2-45e7-80f1-60fa0d5a4378" formVersion="1.0">
+<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fdb2a" formName="Admission (Simple)" formEncounterType="e22e39fd-7db2-45e7-80f1-60fa0d5a4378" formVersion="1.0">
 
     <script type="text/javascript">
         $(function() {
@@ -30,10 +30,6 @@
 
         <p>
             <obs conceptId="162879"  style="textarea" labelText="Reason for admission" rows="6" cols="60"/>
-        </p>
-
-        <p>
-            <obs conceptId="5219" labelText="Chief Complains"/>
         </p>
 
         <p>

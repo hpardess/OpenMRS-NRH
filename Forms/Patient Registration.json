@@ -1,0 +1,110 @@
+App ID:  referenceapplication.registrationapp.myRegisterPat
+
+{
+	"id": "referenceapplication.registrationapp.myRegisterPat",
+	"instanceOf": "registrationapp.registerPatient",
+	"label": "Register Patient",
+	"description": "Create a new Patient Record",
+	"extensions": [{
+		"id": "referenceapplication.registrationapp.myRegisterPat.homepageLink",
+		"extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+		"type": "link",
+		"label": "referenceapplication.app.registerPatient.label",
+		"url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.myRegisterPat",
+		"icon": "icon-user",
+		"order": 1,
+		"requiredPrivilege": "App: registrationapp.registerPatient"
+	}],
+	"config": {
+		"afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
+		"sections": [{
+			"id": "personalInfo",
+			"label": "Personal Info",
+			"questions": [{
+				"legend": "Birth Place",
+				"fields": [{
+					"type": "personAttribute",
+					"label": "Birth Place",
+					"formFieldName": "birthPlace",
+					"uuid": "8d8718c2-c2cc-11de-8d13-0010c6dffd0f",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/text",
+						"config": {
+							"size": 60
+						}
+					}
+				}]
+			}]
+		}, {
+			"id": "contactInfo",
+			"label": "registrationapp.patient.contactInfo.label",
+			"questions": [{
+				"legend": "Person.address",
+				"fields": [{
+					"type": "personAddress",
+					"label": "registrationapp.patient.address.question",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/personAddress"
+					}
+				}]
+			}, {
+				"legend": "registrationapp.patient.phone.label",
+				"id": "phoneNumberLabel",
+				"fields": [{
+					"type": "personAttribute",
+					"label": "registrationapp.patient.phone.question",
+					"formFieldName": "phoneNumber",
+					"uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/text"
+					},
+					"cssClasses": ["phone"]
+				}]
+			}]
+		}, {
+			"id": "nextOfKin",
+			"label": "Next of Kin",
+			"questions": [{
+				"legend": "Father",
+				"fields": [{
+					"type": "personAttribute",
+					"label": "Father's Name",
+					"formFieldName": "fatherName",
+					"uuid": "80ccb66d-0f30-4dfa-b8d5-4dedfb884106",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/text"
+					},
+					"cssClasses": ["required"]
+				}, {
+					"type": "personAttribute",
+					"label": "Father's Occupation",
+					"formFieldName": "fatherOccupation",
+					"uuid": "b73af4fa-4c57-486e-a725-fd6a505b69b1",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/text",
+						"config": {
+							"size": 60
+						}
+					}
+				}]
+			}, {
+				"legend": "Mother",
+				"fields": [{
+					"type": "personAttribute",
+					"label": "Mother's Name",
+					"formFieldName": "motherName",
+					"uuid": "8d871d18-c2cc-11de-8d13-0010c6dffd0f",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/text"
+					}
+				}]
+			}]
+		}]
+	}
+}

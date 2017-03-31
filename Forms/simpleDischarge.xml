@@ -1,4 +1,4 @@
-<htmlform formUuid="3ec3a860-5f95-4c69-a539-50029328d748" formName="Discharge v2" formEncounterType="181820aa-88c9-479b-9077-af92f5364329" formVersion="1.0">
+<htmlform formUuid="b5f8ffd8-fbde-11e2-8ff2-fd54ab5fdb2a" formName="Discharge (Simple)" formEncounterType="181820aa-88c9-479b-9077-af92f5364329" formVersion="1.0">
 
     <script type="text/javascript">
         $(function() {
@@ -29,12 +29,17 @@
         </p>
 
         <p>
-            <obs conceptId="163104" style="textarea" labelText="Treatment plan" rows="6" cols="60"/>
+            <obs conceptId="163104" style="textarea" labelText="Treatment plan (at Hospital)" rows="6" cols="60"/>
         </p>
 
         <p>
-            <obs conceptId="163106" style="textarea" labelText="Instructions to patient and/or family" rows="6" cols="60"/>
+            <obs conceptId="163106" style="textarea" labelText="Instructions to patient and/or family (at Home)" rows="6" cols="60"/>
         </p>
+        
+        <p>
+            <obs conceptId="5096" labelText="Next appointment date" />
+        </p>
+        
     </section>
 
     <submit submitClass="confirm right" submitCode="uicommons.saveForm" />
