@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Label" Text="Admission Form" HelpText="Admission Form" Left="354px" Top="196px" fontWeight="bolder" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="361px" Top="32px" Width="114px" Height="103px" fontSize="16px" fontFamily="Arial" backgroundColor="initial" />
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Hospital" Left="244px" Top="151px" fontWeight="bolder" fontSize="26px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Patient Name:" HelpText="Patient Name:" Left="64px" Top="239px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Registration No:" HelpText="Registration No:" Left="62px" Top="265px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Address:" HelpText="Address:" Left="62px" Top="292px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="F/Name:" HelpText="F/Name:" Left="300px" Top="239px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Weight:" HelpText="Weight:" Left="303px" Top="259px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age:" HelpText="Age:" Left="532px" Top="236px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date:" HelpText="Date:" Left="631px" Top="259px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Sex:" HelpText="Sex:" Left="629px" Top="235px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="HorizontalLine" Left="52px" Top="322px" Width="734px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="Label" Text="Chief Complains:" HelpText="Chief Complains:" Left="63px" Top="331px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="On Examination" HelpText="On Examination" Left="67px" Top="375px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Pulse:" HelpText="Pulse:" Left="98px" Top="408px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Temp:" HelpText="Temp:" Left="635px" Top="407px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Resp. Rate:" HelpText="Resp. Rate:" Left="432px" Top="408px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="B.P:" HelpText="B.P:" Left="263px" Top="409px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Investigation and Treatment done:" HelpText="Investigation and Treatment done:" Left="64px" Top="437px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Ref to:" HelpText="Ref to:" Left="66px" Top="514px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name of Casualty/OPD.M.O:" HelpText="Name of Casualty/OPD.M.O:" Left="67px" Top="551px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Signature:" HelpText="Signature:" Left="460px" Top="551px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date:" HelpText="Date:" Left="641px" Top="541px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <DesignItems>
+        <DesignItem type="0" id="1" name="Patient Admission" binding="Patient-Admission" description="Patient Admission" sourceType="Grouping">
+            <DesignItem type="1" id="2" name="identifier" binding="identifier" description="identifier" text="identifier" sourceType="Custom" />
+            <DesignItem type="1" id="3" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="5" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="admission_datetime" binding="admission_datetime" description="admission_datetime" text="admission_datetime" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="admission_provider" binding="admission_provider" description="admission_provider" text="admission_provider" sourceType="Custom" />
+            <DesignItem type="1" id="9" name="admission_location" binding="admission_location" description="admission_location" text="admission_location" sourceType="Custom" />
+            <DesignItem type="1" id="10" name="reason_for_admission_fixed" binding="reason_for_admission_fixed" description="reason_for_admission_fixed" text="reason_for_admission_fixed" sourceType="Custom" />
+            <DesignItem type="1" id="11" name="reason_for_admission_text" binding="reason_for_admission_text" description="reason_for_admission_text" text="reason_for_admission_text" sourceType="Custom" />
+            <DesignItem type="1" id="12" name="chief_complains" binding="chief_complains" description="chief_complains" text="chief_complains" sourceType="Custom" />
+            <DesignItem type="1" id="13" name="height_en" binding="height_en" description="height_en" text="height_en" sourceType="Custom" />
+            <DesignItem type="1" id="14" name="weight_en" binding="weight_en" description="weight_en" text="weight_en" sourceType="Custom" />
+            <DesignItem type="1" id="15" name="temperature_en" binding="temperature_en" description="temperature_en" text="temperature_en" sourceType="Custom" />
+            <DesignItem type="1" id="16" name="pulse_en" binding="pulse_en" description="pulse_en" text="pulse_en" sourceType="Custom" />
+            <DesignItem type="1" id="17" name="respiratory_rate_en" binding="respiratory_rate_en" description="respiratory_rate_en" text="respiratory_rate_en" sourceType="Custom" />
+            <DesignItem type="1" id="18" name="systolic_blood_pressure_en" binding="systolic_blood_pressure_en" description="systolic_blood_pressure_en" text="systolic_blood_pressure_en" sourceType="Custom" />
+            <DesignItem type="1" id="19" name="diastolic_blood_pressure_en" binding="diastolic_blood_pressure_en" description="diastolic_blood_pressure_en" text="diastolic_blood_pressure_en" sourceType="Custom" />
+            <DesignItem type="1" id="20" name="blood_oxygen_saturation_en" binding="blood_oxygen_saturation_en" description="blood_oxygen_saturation_en" text="blood_oxygen_saturation_en" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+</Report>

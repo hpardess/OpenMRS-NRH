@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Label" Text="Reg. No:" HelpText="Reg. No:" Left="73px" Top="184px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name/Father Name:" HelpText="Name/Father Name:" Left="71px" Top="212px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age/Sex:" HelpText="Age/Sex:" Left="669px" Top="181px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date of Admission:" HelpText="Date of Admission:" Left="390px" Top="179px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Address:" HelpText="Address:" Left="71px" Top="241px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Diagnoses/Procedure:" HelpText="Diagnoses/Procedure:" Left="68px" Top="267px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date of Discharge:" HelpText="Date of Discharge:" Left="71px" Top="340px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Treatment in Hospital:" HelpText="Treatment in Hospital" Left="69px" Top="369px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Treatment at Home:" HelpText="Treatment at Home:" Left="74px" Top="497px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Next Appointment:" HelpText="Next Appointment:" Left="81px" Top="609px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Discharged by:" HelpText="Discharged by:" Left="517px" Top="608px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="350px" Top="17px" Width="118px" Height="95px" fontSize="16px" fontFamily="Arial" backgroundColor="initial" />
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital Discharge Slip" HelpText="Nangarhar Regional Hospital" Left="177px" Top="125px" fontWeight="bolder" fontSize="24px" fontFamily="Arial" />
+</Report>

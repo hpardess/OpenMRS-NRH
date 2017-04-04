@@ -9,8 +9,8 @@ visit_note_encounter.encounter_datetime as visit_note_datetime,
 (SELECT clinic_note.value_text FROM obs AS clinic_note WHERE clinic_note.voided= 0 AND clinic_note.concept_id=162169 AND clinic_note.encounter_id=visit_note_encounter.encounter_id LIMIT 1) AS visit_note_clinic_note
 
 FROM person, person_name, patient_identifier, encounter as visit_note_encounter
-WHERE person.person_id = :person 
--- AND visit_note_encounter.encounter_id = :encounterId
+WHERE person.person_id = :patientId 
+AND visit_note_encounter.encounter_id = :encounterId
 AND person.person_id = person_name.person_id 
 AND person.person_id = patient_identifier.patient_id
 AND person.voided=0 
