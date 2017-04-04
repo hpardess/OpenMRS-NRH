@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
     <Item WidgetType="Label" Text="Admission Form" HelpText="Admission Form" Left="354px" Top="196px" fontWeight="bolder" fontSize="16px" fontFamily="Arial" />
     <Item WidgetType="Logo" Left="361px" Top="32px" Width="114px" Height="103px" fontSize="16px" fontFamily="Arial" backgroundColor="initial" />
