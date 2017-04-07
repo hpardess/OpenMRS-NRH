@@ -1,4 +1,4 @@
-<htmlform formUuid="63c7a01d-66b4-4e7a-ae12-d3fccab82506" formName="Medication Order" formEncounterType="f549375c-e5a0-4fac-bffd-42c5f7c325fc" formVersion="1.0">
+<htmlform formUuid="27c3fa40-a66a-4f58-946f-2af2bcab155a" formName="Medication Order" formEncounterType="f549375c-e5a0-4fac-bffd-42c5f7c325fc" formVersion="1.0">
 	<ifMode mode="VIEW" include="false">
 
 		<script type="text/javascript">
@@ -102,7 +102,7 @@
 					var hiddenValue = $(element).closest("span").find("#"+$(element).attr("id")+"_hid").val();
 					//console.log("hiddenValue: " + hiddenValue);
 					if ( !((hiddenValue == "ERROR") || (hiddenValue == ""))) {
-						setValue($(element).closest("span").attr("id")+"-opt1.value", defaultMedicationCalssification );
+						// setValue($(element).closest("span").attr("id")+"-opt1.value", defaultMedicationCalssification );
 					} else {
 						//console.log("in else");
 						setValue($(element).closest("span").attr("id")+"-opt1.value", "" );
@@ -148,7 +148,7 @@
 			<legend>Medication</legend>
 			<repeat>
 				<template>
-					<div id="{n}-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none;">
+					<div id="{n}-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
 				        <obsgroup groupingConceptId="160741">
 				        	<p>
 								<obs id="{n}" conceptId="CIEL:1282" answerClasses="Drug" style="autocomplete" size="10" labelText="Drug to order"/>
@@ -181,7 +181,7 @@
 							<p>
 								<obs id="{n}-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
 							</p>
-							<span class="addRemoveButtons" >
+							<span class="addRemoveButtons right" >
 								<i id="{n}-addEntry" class="addEntry icon-">&#xf055; Add</i>
 								<i id="{n}-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
 							</span>
