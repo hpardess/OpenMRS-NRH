@@ -1,0 +1,353 @@
+<htmlform formUuid="27c3fa40-a66a-4f58-946f-2af2bcab155a" formName="Medication Order" formEncounterType="f549375c-e5a0-4fac-bffd-42c5f7c325fc" formVersion="3.0">
+	<ifMode mode="VIEW" include="false">
+
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				toggleContainers();
+				$(".autoCompleteText").change(function (){
+					onchangeCustomFunction(this);
+				});
+			});
+
+			var toggleContainers = function() {
+				$(".toggleContainer").each(function (index, toggleContainer) {
+					// checks if this toggleContainer is the first of its block
+					if(!($(toggleContainer).prev().attr("templateBlockId") == $(toggleContainer).attr("templateBlockId") )) {
+						$(toggleContainer).show();
+						$(toggleContainer).find(".removeEntry").remove();
+					}
+
+					// checks if this toggleContainer is the last
+					if(!($(toggleContainer).next().attr("templateBlockId") == $(toggleContainer).attr("templateBlockId") )) {
+						$(toggleContainer).find(".addEntry").remove();
+					}
+					
+					// if the obs is not empty, show the field 
+					if (!(getValue(parseFloat(toggleContainer.id)+".value") == "") || (getValue(parseFloat(toggleContainer.id)+".value") == null) ) {
+						$(toggleContainer).show();
+						
+						// if the next obs is not empty, hide buttons
+						if (!(getValue(parseFloat($(toggleContainer).next().attr("id"))+".value") == "")) {
+							$(toggleContainer).find(".addEntry").hide();
+							$(toggleContainer).find(".removeEntry").hide();
+						}
+					}
+				});
+
+				$('i.addEntry').click(function(){
+					// allow Add only if one field is NOT empty
+					var currentAddEntry = $(this);
+					var addContainer = 0;
+					$(currentAddEntry).closest(".toggleContainer").find("input").each( function (index, currentInput) {
+						if (!($(currentInput).val() == "")) {
+							// handle checkbox fields
+							if ($(currentInput).attr('type') == "checkbox") {
+								if($(currentInput).prop("checked") == true) {
+									addContainer = addContainer + 1;
+								}
+							} else {
+								addContainer = addContainer + 1;
+							}
+						}
+					});
+					// handle drop down lists
+					$(currentAddEntry).closest(".toggleContainer").find("select").each( function (index, currentSelect) {
+						if (!($(currentSelect).find(":selected").text() == "")) {
+							addContainer = addContainer + 1;
+						}
+					});
+					if (addContainer > 0) {
+						$(currentAddEntry).hide();
+						$(currentAddEntry).closest(".toggleContainer").find(".removeEntry").hide();
+						$(currentAddEntry).closest(".toggleContainer").next().show();		
+					}
+					return false;
+				});
+
+				$('i.removeEntry').click(function(){
+					// do not allow Remove if fields have a value	
+					var currentRemoveEntry = $(this);
+					var removeContainer = 0;
+
+					$(currentRemoveEntry).closest(".toggleContainer").find("input").each( function (index, currentInput) {
+						if (!($(currentInput).val() == "")) {
+							// handle checkbox fields
+							if ($(currentInput).attr('type') == "checkbox") {
+								if($(currentInput).prop("checked") == true) {
+									removeContainer = removeContainer + 1;
+								}
+							} else {
+								removeContainer = removeContainer + 1;
+							}
+						}
+					});
+					// handle drop down lists
+					$(currentRemoveEntry).closest(".toggleContainer").find("select").each( function (index, currentSelect) {
+						if (!($(currentSelect).find(":selected").text() == "")) {
+							removeContainer = removeContainer + 1;
+						}
+					});
+					if (removeContainer == 0) {
+						$(currentRemoveEntry).closest(".toggleContainer").hide();
+						$(currentRemoveEntry).closest(".toggleContainer").prev().find(".addEntry").show();
+						$(currentRemoveEntry).closest(".toggleContainer").prev().find(".removeEntry").show();
+					}
+					return false;
+				});
+			}
+
+
+			function onchangeCustomFunction(element) {
+				if(!(typeof $(element) == "undefined")) {
+					var hiddenValue = $(element).closest("span").find("#"+$(element).attr("id")+"_hid").val();
+					//console.log("hiddenValue: " + hiddenValue);
+					if ( !((hiddenValue == "ERROR") || (hiddenValue == ""))) {
+						// setValue($(element).closest("span").attr("id")+"-opt1.value", defaultMedicationCalssification );
+					} else {
+						//console.log("in else");
+						setValue($(element).closest("span").attr("id")+"-opt1.value", "" );
+					}
+				}
+			}
+		</script>
+	</ifMode>
+
+	<section id="medication" sectionTag="section" headerStyle="title" headerCode="Medication">
+		<fieldset field-separator=", ">
+			<legend>Encounter Details</legend>
+			<div class="" id="who-where-when">
+				<p id="who">
+					<label>
+						<uimessage code="coreapps.patientDashBoard.provider" />
+					</label>
+					<span>
+						<encounterProvider default="currentUser" required="true" />
+					</span>
+				</p>
+				<p id="where">
+					<label>
+						<uimessage code="coreapps.patientDashBoard.location" />
+					</label>
+					<span>
+						<encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+					</span>
+				</p>
+				<p id="when">
+					<label>
+						<uimessage code="coreapps.patientDashBoard.date" />
+					</label>
+					<span>
+						<!-- Mandatory showTime="true" to set encounter date and time -->
+						<encounterDate id="encounterDate" default="now" showTime="true"/>
+					</span>
+				</p>
+			</div>
+		</fieldset>
+
+		<fieldset field-separator=", ">
+			<legend>Medication</legend>
+
+					<div id="1-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
+				        <obsgroup groupingConceptId="160741">
+				        	<p>
+								<obs id="1" conceptId="CIEL:1282" answerClasses="Drug" style="autocomplete" size="10" labelText="Drug to order"/>
+							</p>
+
+							<ifMode mode="VIEW" include="false">
+								<p>
+									<span id="weight-value">
+										<p><strong>Patient weight is <span id="weight"><lookup expression="fn.latestObs('CIEL:5089').valueNumeric" /></span>kg</strong>
+										</p>
+									</span>
+									<span id="weight-null">
+										<font color="red"><i class="icon-">&#xf071;</i>Weight has not been recorded yet</font>
+									</span>
+								</p>
+							</ifMode>
+
+							<p>
+								<obs id="1-dose" conceptId="CIEL:160856" labelText="Dose" />
+							</p>
+
+							<p>
+								<obs id="1-dose-unit" conceptId="CIEL:161563" labelText="Unit" answerConceptIds="CIEL:161553, CIEL:161554, CIEL:162263, CIEL:162366" answerLabels="mg, g, ml, mcg" />
+							</p>
+
+							<p>
+								<obs id="1-frequency"	conceptId="CIEL:160855" labelText="Frequency" />
+							</p>
+
+							<p>
+								<obs id="1-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
+							</p>
+							<span class="addRemoveButtons right" >
+								<i id="1-addEntry" class="addEntry icon-">&#xf055; Add</i>
+								<i id="1-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
+							</span>
+						</obsgroup>
+					</div>
+
+					<div id="2-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
+				        <obsgroup groupingConceptId="160741">
+				        	<p>
+								<obs id="2" conceptId="CIEL:1282" answerClasses="Drug" style="autocomplete" size="10" labelText="Drug to order"/>
+							</p>
+
+							<ifMode mode="VIEW" include="false">
+								<p>
+									<span id="weight-value">
+										<p><strong>Patient weight is <span id="weight"><lookup expression="fn.latestObs('CIEL:5089').valueNumeric" /></span>kg</strong>
+										</p>
+									</span>
+									<span id="weight-null">
+										<font color="red"><i class="icon-">&#xf071;</i>Weight has not been recorded yet</font>
+									</span>
+								</p>
+							</ifMode>
+
+							<p>
+								<obs id="2-dose" conceptId="CIEL:160856" labelText="Dose" />
+							</p>
+
+							<p>
+								<obs id="2-dose-unit" conceptId="CIEL:161563" labelText="Unit" answerConceptIds="CIEL:161553, CIEL:161554, CIEL:162263, CIEL:162366" answerLabels="mg, g, ml, mcg" />
+							</p>
+
+							<p>
+								<obs id="2-frequency"	conceptId="CIEL:160855" labelText="Frequency" />
+							</p>
+
+							<p>
+								<obs id="2-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
+							</p>
+							<span class="addRemoveButtons right" >
+								<i id="2-addEntry" class="addEntry icon-">&#xf055; Add</i>
+								<i id="2-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
+							</span>
+						</obsgroup>
+					</div>
+
+					<div id="3-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
+				        <obsgroup groupingConceptId="160741">
+				        	<p>
+								<obs id="3" conceptId="CIEL:1282" answerClasses="Drug" style="autocomplete" size="10" labelText="Drug to order"/>
+							</p>
+
+							<ifMode mode="VIEW" include="false">
+								<p>
+									<span id="weight-value">
+										<p><strong>Patient weight is <span id="weight"><lookup expression="fn.latestObs('CIEL:5089').valueNumeric" /></span>kg</strong>
+										</p>
+									</span>
+									<span id="weight-null">
+										<font color="red"><i class="icon-">&#xf071;</i>Weight has not been recorded yet</font>
+									</span>
+								</p>
+							</ifMode>
+
+							<p>
+								<obs id="3-dose" conceptId="CIEL:160856" labelText="Dose" />
+							</p>
+
+							<p>
+								<obs id="3-dose-unit" conceptId="CIEL:161563" labelText="Unit" answerConceptIds="CIEL:161553, CIEL:161554, CIEL:162263, CIEL:162366" answerLabels="mg, g, ml, mcg" />
+							</p>
+
+							<p>
+								<obs id="3-frequency"	conceptId="CIEL:160855" labelText="Frequency" />
+							</p>
+
+							<p>
+								<obs id="3-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
+							</p>
+							<span class="addRemoveButtons right" >
+								<i id="3-addEntry" class="addEntry icon-">&#xf055; Add</i>
+								<i id="3-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
+							</span>
+						</obsgroup>
+					</div>
+
+					<div id="2-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
+				        <obsgroup groupingConceptId="160741">
+				        	<p>
+								<obs id="4" conceptId="CIEL:1282" answerClasses="Drug" style="autocomplete" size="10" labelText="Drug to order"/>
+							</p>
+
+							<ifMode mode="VIEW" include="false">
+								<p>
+									<span id="weight-value">
+										<p><strong>Patient weight is <span id="weight"><lookup expression="fn.latestObs('CIEL:5089').valueNumeric" /></span>kg</strong>
+										</p>
+									</span>
+									<span id="weight-null">
+										<font color="red"><i class="icon-">&#xf071;</i>Weight has not been recorded yet</font>
+									</span>
+								</p>
+							</ifMode>
+
+							<p>
+								<obs id="4-dose" conceptId="CIEL:160856" labelText="Dose" />
+							</p>
+
+							<p>
+								<obs id="4-dose-unit" conceptId="CIEL:161563" labelText="Unit" answerConceptIds="CIEL:161553, CIEL:161554, CIEL:162263, CIEL:162366" answerLabels="mg, g, ml, mcg" />
+							</p>
+
+							<p>
+								<obs id="4-frequency"	conceptId="CIEL:160855" labelText="Frequency" />
+							</p>
+
+							<p>
+								<obs id="4-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
+							</p>
+							<span class="addRemoveButtons right" >
+								<i id="4-addEntry" class="addEntry icon-">&#xf055; Add</i>
+								<i id="4-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
+							</span>
+						</obsgroup>
+					</div>
+
+					<div id="5-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
+				        <obsgroup groupingConceptId="160741">
+				        	<p>
+								<obs id="5" conceptId="CIEL:1282" answerClasses="Drug" style="autocomplete" size="10" labelText="Drug to order"/>
+							</p>
+
+							<ifMode mode="VIEW" include="false">
+								<p>
+									<span id="weight-value">
+										<p><strong>Patient weight is <span id="weight"><lookup expression="fn.latestObs('CIEL:5089').valueNumeric" /></span>kg</strong>
+										</p>
+									</span>
+									<span id="weight-null">
+										<font color="red"><i class="icon-">&#xf071;</i>Weight has not been recorded yet</font>
+									</span>
+								</p>
+							</ifMode>
+
+							<p>
+								<obs id="5-dose" conceptId="CIEL:160856" labelText="Dose" />
+							</p>
+
+							<p>
+								<obs id="5-dose-unit" conceptId="CIEL:161563" labelText="Unit" answerConceptIds="CIEL:161553, CIEL:161554, CIEL:162263, CIEL:162366" answerLabels="mg, g, ml, mcg" />
+							</p>
+
+							<p>
+								<obs id="5-frequency"	conceptId="CIEL:160855" labelText="Frequency" />
+							</p>
+
+							<p>
+								<obs id="5-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
+							</p>
+							<span class="addRemoveButtons right" >
+								<i id="5-addEntry" class="addEntry icon-">&#xf055; Add</i>
+								<i id="5-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
+							</span>
+						</obsgroup>
+					</div>
+
+		</fieldset>
+	</section>
+	<submit/>
+</htmlform>

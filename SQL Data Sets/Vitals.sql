@@ -57,7 +57,7 @@ LIMIT 1), '_%') AS "blood_oxygen_saturation_en"
 
 FROM person, person_name, patient_identifier, encounter as vital_encounter
 WHERE person.person_id = :patient
--- AND vital_encounter.encounter_id = :encounterId
+AND vital_encounter.encounter_id = :encounterId
 AND person.person_id = person_name.person_id 
 AND person.person_id = patient_identifier.patient_id
 AND person.voided=0 
