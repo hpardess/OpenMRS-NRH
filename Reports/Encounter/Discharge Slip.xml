@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Label" Text="Diagnoses/Procedure:" HelpText="Diagnoses/Procedure:" Left="68px" Top="306px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date of Discharge:" HelpText="Date of Discharge:" Left="71px" Top="379px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Treatment in Hospital:" HelpText="Treatment in Hospital" Left="69px" Top="429px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Treatment at Home:" HelpText="Treatment at Home:" Left="71px" Top="656px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="HorizontalLine" Left="52px" Top="294px" Width="727px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="2px" />
+    <Item WidgetType="Label" Text="Address:" HelpText="Address:" Left="66px" Top="263px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age:" HelpText="Age:" Left="496px" Top="211px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name:" HelpText="Name/Father Name:" Left="62px" Top="214px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Father Name:" HelpText="Label" Left="63px" Top="239px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date of Admission:" HelpText="Date of Admission:" Left="497px" Top="235px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Sex:" HelpText="Age/Sex:" Left="572px" Top="211px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="350px" Top="17px" Width="118px" Height="95px" fontSize="16px" fontFamily="Arial" backgroundColor="initial" ExternalSource="moph_logo.jpg" />
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Regional Hospital" Left="242px" Top="125px" fontWeight="bolder" fontSize="24px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Discharge Slip" HelpText="Discharge Slip" Left="352px" Top="161px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Reg. No:" HelpText="Reg. No:" Left="643px" Top="211px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Discharged by:" HelpText="Discharged by:" Left="72px" Top="877px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Next Appointment:" HelpText="Next Appointment:" Left="468px" Top="875px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Print Date:" HelpText="Print Date:" Left="467px" Top="900px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="General Treatment Status:" HelpText="Label" Left="69px" Top="404px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <PtPos>
+        <Item ID="2" XPOS="704px" YPOS="210px" Binding="identifier" Text="identifier" HelpText="identifier" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="4" XPOS="112px" YPOS="214px" Binding="fullname" Text="fullname" HelpText="fullname" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="6" XPOS="606px" YPOS="210px" Binding="gender" Text="gender" HelpText="gender" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="7" XPOS="203px" YPOS="379px" Binding="discharge_datetime" Text="discharge_datetime" HelpText="discharge_datetime" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="8" XPOS="187px" YPOS="876px" Binding="discharge_provider" Text="discharge_provider" HelpText="discharge_provider" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="10" XPOS="255px" YPOS="404px" Binding="general_treatment_status" Text="general_treatment_status" HelpText="general_treatment_status" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="11" XPOS="70px" YPOS="451px" Binding="treatment_plan_at_hospital" Text="treatment_plan_at_hospital" HelpText="treatment_plan_at_hospital" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="12" XPOS="73px" YPOS="677px" Binding="instructions_to_patient_and_family" Text="instructions_to_patient_and_family" HelpText="instructions_to_patient_and_family" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="13" XPOS="605px" YPOS="874px" Binding="next_appointment_date" Text="next_appointment_date" HelpText="next_appointment_date" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="15" XPOS="530px" YPOS="210px" Binding="age" Text="age" HelpText="age" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="16" XPOS="160px" YPOS="238px" Binding="fathername" Text="fathername" HelpText="fathername" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="18" XPOS="548px" YPOS="898px" Binding="now" Text="now" HelpText="now" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="19" XPOS="134px" YPOS="262px" Binding="address" Text="address" HelpText="address" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="20" XPOS="630px" YPOS="234px" Binding="admission_datetime" Text="admission_datetime" HelpText="admission_datetime" color="Black" fontSize="14px" fontFamily="Arial" />
+    </PtPos>
+    <DesignItems>
+        <DesignItem type="0" id="1" name="Patient Discharge" binding="Patient-Discharge" description="Patient Discharge" sourceType="Grouping">
+            <DesignItem type="1" id="2" name="identifier" binding="identifier" description="identifier" text="identifier" sourceType="Custom" />
+            <DesignItem type="1" id="3" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="5" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="1" id="15" name="age" binding="age" description="age" text="age" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="1" id="16" name="fathername" binding="fathername" description="fathername" text="fathername" sourceType="Custom" />
+            <DesignItem type="1" id="17" name="mothername" binding="mothername" description="mothername" text="mothername" sourceType="Custom" />
+            <DesignItem type="1" id="19" name="address" binding="address" description="address" text="address" sourceType="Custom" />
+            <DesignItem type="1" id="20" name="admission_datetime" binding="admission_datetime" description="admission_datetime" text="admission_datetime" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="discharge_datetime" binding="discharge_datetime" description="discharge_datetime" text="discharge_datetime" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="discharge_provider" binding="discharge_provider" description="discharge_provider" text="discharge_provider" sourceType="Custom" />
+            <DesignItem type="1" id="9" name="discharge_location" binding="discharge_location" description="discharge_location" text="discharge_location" sourceType="Custom" />
+            <DesignItem type="1" id="10" name="general_treatment_status" binding="general_treatment_status" description="general_treatment_status" text="general_treatment_status" sourceType="Custom" />
+            <DesignItem type="1" id="11" name="treatment_plan_at_hospital" binding="treatment_plan_at_hospital" description="treatment_plan_at_hospital" text="treatment_plan_at_hospital" sourceType="Custom" />
+            <DesignItem type="1" id="12" name="instructions_to_patient_and_family" binding="instructions_to_patient_and_family" description="instructions_to_patient_and_family" text="instructions_to_patient_and_family" sourceType="Custom" />
+            <DesignItem type="1" id="13" name="next_appointment_date" binding="next_appointment_date" description="next_appointment_date" text="next_appointment_date" sourceType="Custom" />
+            <DesignItem type="1" id="18" name="now" binding="now" description="now" text="now" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+</Report>

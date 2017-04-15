@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Regional Hospital" Left="252px" Top="128px" fontWeight="bolder" fontSize="24px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name:" HelpText="Name" Left="82px" Top="209px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Reg. No:" HelpText="Reg. No:" Left="600px" Top="231px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Sex:" HelpText="Sex:" Left="598px" Top="205px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age:" HelpText="Age:" Left="455px" Top="204px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Primary Diagnoses:" HelpText="Primary Diagnoses:" Left="80px" Top="301px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="368px" Top="16px" Width="117px" Height="104px" fontSize="16px" fontFamily="Arial" ExternalSource="moph_logo.jpg" />
+    <Item WidgetType="HorizontalLine" Left="65px" Top="285px" Width="696px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="2px" />
+    <Item WidgetType="Label" Text="Father Name:" HelpText="Father Name:" Left="80px" Top="235px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Consultation Date:" HelpText="Date:" Left="519px" Top="929px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Provider/Doctor:" HelpText="Provider/Doctor:" Left="87px" Top="932px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Print Date:" HelpText="Print Date:" Left="521px" Top="953px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Clinical Note:" HelpText="Clinical Note:" Left="81px" Top="489px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Secondary Diagnoses:" HelpText="Secondary Diagnoses:" Left="77px" Top="399px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Address: " HelpText="Address: " Left="80px" Top="257px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Visit Note (Consultation)" HelpText="Visit Note" Left="348px" Top="162px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <PtPos>
+        <Item ID="2" XPOS="664px" YPOS="231px" Binding="identifier" Text="identifier" HelpText="identifier" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="4" XPOS="130px" YPOS="207px" Binding="fullname" Text="fullname" HelpText="fullname" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="6" XPOS="634px" YPOS="203px" Binding="gender" Text="gender" HelpText="gender" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="7" XPOS="655px" YPOS="928px" Binding="visit_note_datetime" Text="visit_note_datetime" HelpText="visit_note_datetime" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="8" XPOS="210px" YPOS="932px" Binding="visit_note_provider" Text="visit_note_provider" HelpText="visit_note_provider" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="10" XPOS="81px" YPOS="512px" Binding="visit_note_clinic_note" Text="visit_note_clinic_note" HelpText="visit_note_clinic_note" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="12" XPOS="491px" YPOS="203px" Binding="age" Text="age" HelpText="age" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="13" XPOS="178px" YPOS="235px" Binding="fathername" Text="fathername" HelpText="fathername" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="15" XPOS="148px" YPOS="257px" Binding="address" Text="address" HelpText="address" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="17" XPOS="80px" YPOS="325px" Binding="visit_note_primary_diagnoses" Text="visit_note_primary_diagnoses" HelpText="visit_note_primary_diagnoses" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="18" XPOS="80px" YPOS="420px" Binding="visit_note_secondary_diagnoses" Text="visit_note_secondary_diagnoses" HelpText="visit_note_secondary_diagnoses" color="Black" fontSize="14px" fontFamily="Arial" />
+    </PtPos>
+    <DesignItems>
+        <DesignItem type="0" id="1" name="Patient Visit Note" binding="Patient-Visit-Note" description="Patient Visit Note" sourceType="Grouping">
+            <DesignItem type="1" id="2" name="identifier" binding="identifier" description="identifier" text="identifier" sourceType="Custom" />
+            <DesignItem type="1" id="3" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="5" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="1" id="12" name="age" binding="age" description="age" text="age" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="1" id="13" name="fathername" binding="fathername" description="fathername" text="fathername" sourceType="Custom" />
+            <DesignItem type="1" id="14" name="mothername" binding="mothername" description="mothername" text="mothername" sourceType="Custom" />
+            <DesignItem type="1" id="15" name="address" binding="address" description="address" text="address" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="visit_note_datetime" binding="visit_note_datetime" description="visit_note_datetime" text="visit_note_datetime" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="visit_note_provider" binding="visit_note_provider" description="visit_note_provider" text="visit_note_provider" sourceType="Custom" />
+            <DesignItem type="1" id="9" name="visit_note_location" binding="visit_note_location" description="visit_note_location" text="visit_note_location" sourceType="Custom" />
+            <DesignItem type="1" id="10" name="visit_note_clinic_note" binding="visit_note_clinic_note" description="visit_note_clinic_note" text="visit_note_clinic_note" sourceType="Custom" />
+            <DesignItem type="1" id="17" name="visit_note_primary_diagnoses" binding="visit_note_primary_diagnoses" description="visit_note_primary_diagnoses" text="visit_note_primary_diagnoses" sourceType="Custom" />
+            <DesignItem type="1" id="18" name="visit_note_secondary_diagnoses" binding="visit_note_secondary_diagnoses" description="visit_note_secondary_diagnoses" text="visit_note_secondary_diagnoses" sourceType="Custom" />
+            <DesignItem type="1" id="19" name="NOW" binding="NOW" description="NOW" text="NOW" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+</Report>

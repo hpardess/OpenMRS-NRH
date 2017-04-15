@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Label" Text="Name:" HelpText="Name" Left="82px" Top="206px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age:" HelpText="Age:" Left="455px" Top="201px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Transfer Date:" HelpText="Transfer Date:" Left="78px" Top="287px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Transfer To:" HelpText="Transfered To:" Left="441px" Top="319px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Reason for Transfer" HelpText="Reason for Transfer" Left="82px" Top="360px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Provider/Nurse/Doctor:" HelpText="Provider/Nurse/Doctor:" Left="85px" Top="470px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Print Date: " HelpText="Print Date: " Left="86px" Top="500px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="367px" Top="15px" Width="118px" Height="104px" fontSize="16px" fontFamily="Arial" ExternalSource="moph_logo.jpg" />
+    <Item WidgetType="Label" Text="Transfer Slip" HelpText="Transfer Slip" Left="375px" Top="165px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Regional Hospital" Left="254px" Top="126px" fontWeight="bolder" fontSize="24px" fontFamily="Arial" />
+    <Item WidgetType="HorizontalLine" Left="65px" Top="267px" Width="696px" color="Black" fontWeight="bolder" fontSize="14px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="2px" />
+    <Item WidgetType="Label" Text="Father Name:" HelpText="Father Name:" Left="80px" Top="235px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Reg. No:" HelpText="Reg. No:" Left="581px" Top="226px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Sex:" HelpText="Sex:" Left="580px" Top="201px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Transfer From:" HelpText="Transfer From:" Left="80px" Top="324px" color="Black" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <PtPos>
+        <Item ID="3" XPOS="649px" YPOS="225px" Binding="identifier" Text="identifier" HelpText="identifier" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="5" XPOS="135px" YPOS="206px" Binding="fullname" Text="fullname" HelpText="fullname" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="7" XPOS="495px" YPOS="199px" Binding="age" Text="age" HelpText="age" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="8" XPOS="619px" YPOS="199px" Binding="gender" Text="gender" HelpText="gender" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="9" XPOS="178px" YPOS="235px" Binding="fathername" Text="fathername" HelpText="fathername" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="12" XPOS="180px" YPOS="286px" Binding="transfer_datetime" Text="transfer_datetime" HelpText="transfer_datetime" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="13" XPOS="252px" YPOS="468px" Binding="transfer_provider" Text="transfer_provider" HelpText="transfer_provider" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="14" XPOS="528px" YPOS="318px" Binding="transfer_to_location" Text="transfer_to_location" HelpText="transfer_to_location" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="15" XPOS="82px" YPOS="379px" Binding="reason_for_patient_transfer" Text="reason_for_patient_transfer" HelpText="reason_for_patient_transfer" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="16" XPOS="166px" YPOS="499px" Binding="now" Text="now" HelpText="now" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="17" XPOS="186px" YPOS="323px" Binding="transfer_from_location" Text="transfer_from_location" HelpText="transfer_from_location" color="Black" fontSize="14px" fontFamily="Arial" />
+    </PtPos>
+    <DesignItems>
+        <DesignItem type="0" id="1" name="Patient Transfer" binding="Patient-Transfer" description="Patient Transfer" sourceType="Grouping">
+            <DesignItem type="1" id="3" name="identifier" binding="identifier" description="identifier" text="identifier" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="5" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="age" binding="age" description="age" text="age" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="1" id="9" name="fathername" binding="fathername" description="fathername" text="fathername" sourceType="Custom" />
+            <DesignItem type="1" id="10" name="mothername" binding="mothername" description="mothername" text="mothername" sourceType="Custom" />
+            <DesignItem type="1" id="11" name="address" binding="address" description="address" text="address" sourceType="Custom" />
+            <DesignItem type="1" id="12" name="transfer_datetime" binding="transfer_datetime" description="transfer_datetime" text="transfer_datetime" sourceType="Custom" />
+            <DesignItem type="1" id="13" name="transfer_provider" binding="transfer_provider" description="transfer_provider" text="transfer_provider" sourceType="Custom" />
+            <DesignItem type="1" id="17" name="transfer_from_location" binding="transfer_from_location" description="transfer_from_location" text="transfer_from_location" sourceType="Custom" />
+            <DesignItem type="1" id="14" name="transfer_to_location" binding="transfer_to_location" description="transfer_to_location" text="transfer_to_location" sourceType="Custom" />
+            <DesignItem type="1" id="15" name="reason_for_patient_transfer" binding="reason_for_patient_transfer" description="reason_for_patient_transfer" text="reason_for_patient_transfer" sourceType="Custom" />
+            <DesignItem type="1" id="16" name="now" binding="now" description="now" text="now" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+</Report>

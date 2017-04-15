@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Regional Hospital" Left="252px" Top="128px" fontWeight="bolder" fontSize="24px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name:" HelpText="Name" Left="79px" Top="212px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Father Name:" HelpText="Father Name:" Left="80px" Top="246px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Reg. No:" HelpText="Reg. No:" Left="599px" Top="234px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Sex:" HelpText="Sex:" Left="595px" Top="208px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age:" HelpText="Age:" Left="452px" Top="207px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="HorizontalLine" Left="62px" Top="273px" Width="696px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="Label" Text="Blood Pressure:" HelpText="Blood Pressure" Left="444px" Top="354px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Height (cm):" HelpText="Height (cm)" Left="84px" Top="299px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Weight (kg):" HelpText="Weight (kg)" Left="85px" Top="328px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="(Calculated) BMI:" HelpText="(Calculated) BMI" Left="85px" Top="357px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Temperature (C):" HelpText="Temperature (C)" Left="85px" Top="388px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Provider/Nurse:" HelpText="Provider/Nurse:" Left="88px" Top="454px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Pulse:" HelpText="Pulse" Left="442px" Top="297px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Respiratory rate:" HelpText="Respiratory rate" Left="441px" Top="325px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="350px" Top="12px" Width="127px" Height="107px" fontSize="16px" fontFamily="Arial" ExternalSource="moph_logo.jpg" />
+    <Item WidgetType="Label" Text="Vitals Form" HelpText="Vitals Form" Left="371px" Top="162px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date: " HelpText="Date: " Left="447px" Top="450px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Blood oxygen saturation:" HelpText="Blood oxygen saturation" Left="444px" Top="382px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Print Date:" HelpText="Label" Left="446px" Top="481px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <PtPos>
+        <Item ID="2" XPOS="663px" YPOS="232px" Binding="identifier" Text="identifier" HelpText="identifier" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="4" XPOS="131px" YPOS="210px" Binding="fullname" Text="fullname" HelpText="fullname" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="6" XPOS="633px" YPOS="206px" Binding="gender" Text="gender" HelpText="gender" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="7" XPOS="492px" YPOS="450px" Binding="vital_datetime" Text="vital_datetime" HelpText="vital_datetime" color="black" fontWeight="normal" fontSize="14px" fontFamily="Arial" />
+        <Item ID="8" XPOS="212px" YPOS="453px" Binding="vital_provider" Text="vital_provider" HelpText="vital_provider" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="10" XPOS="183px" YPOS="300px" Binding="height_en" Text="height_en" HelpText="height_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="11" XPOS="183px" YPOS="328px" Binding="weight_en" Text="weight_en" HelpText="weight_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="12" XPOS="219px" YPOS="388px" Binding="temperature_en" Text="temperature_en" HelpText="temperature_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="13" XPOS="493px" YPOS="297px" Binding="pulse_en" Text="pulse_en" HelpText="pulse_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="14" XPOS="575px" YPOS="323px" Binding="respiratory_rate_en" Text="respiratory_rate_en" HelpText="respiratory_rate_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="15" XPOS="573px" YPOS="354px" Binding="systolic_blood_pressure_en" Text="systolic_blood_pressure_en" HelpText="systolic_blood_pressure_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="17" XPOS="642px" YPOS="384px" Binding="blood_oxygen_saturation_en" Text="blood_oxygen_saturation_en" HelpText="blood_oxygen_saturation_en" color="black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="19" XPOS="490px" YPOS="206px" Binding="age" Text="age" HelpText="age" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="20" XPOS="181px" YPOS="243px" Binding="fathername" Text="fathername" HelpText="fathername" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="22" XPOS="220px" YPOS="358px" Binding="bmi_en" Text="bmi_en" HelpText="bmi_en" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="23" XPOS="533px" YPOS="478px" Binding="now" Text="now" HelpText="now" color="Black" fontSize="14px" fontFamily="Arial" />
+    </PtPos>
+    <DesignItems>
+        <DesignItem type="0" id="18" name="Patient Vital" binding="Patient-Vital" description="Patient Vital" sourceType="Grouping">
+            <DesignItem type="1" id="2" name="identifier" binding="identifier" description="identifier" text="identifier" sourceType="Custom" />
+            <DesignItem type="1" id="3" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="5" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="1" id="19" name="age" binding="age" description="age" text="age" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="1" id="20" name="fathername" binding="fathername" description="fathername" text="fathername" sourceType="Custom" />
+            <DesignItem type="1" id="21" name="mothername" binding="mothername" description="mothername" text="mothername" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="vital_datetime" binding="vital_datetime" description="vital_datetime" text="vital_datetime" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="vital_provider" binding="vital_provider" description="vital_provider" text="vital_provider" sourceType="Custom" />
+            <DesignItem type="1" id="9" name="vital_location" binding="vital_location" description="vital_location" text="vital_location" sourceType="Custom" />
+            <DesignItem type="1" id="10" name="height_en" binding="height_en" description="height_en" text="height_en" sourceType="Custom" />
+            <DesignItem type="1" id="11" name="weight_en" binding="weight_en" description="weight_en" text="weight_en" sourceType="Custom" />
+            <DesignItem type="1" id="22" name="bmi_en" binding="bmi_en" description="bmi_en" text="bmi_en" sourceType="Custom" />
+            <DesignItem type="1" id="12" name="temperature_en" binding="temperature_en" description="temperature_en" text="temperature_en" sourceType="Custom" />
+            <DesignItem type="1" id="13" name="pulse_en" binding="pulse_en" description="pulse_en" text="pulse_en" sourceType="Custom" />
+            <DesignItem type="1" id="14" name="respiratory_rate_en" binding="respiratory_rate_en" description="respiratory_rate_en" text="respiratory_rate_en" sourceType="Custom" />
+            <DesignItem type="1" id="15" name="systolic_blood_pressure_en" binding="systolic_blood_pressure_en" description="systolic_blood_pressure_en" text="systolic_blood_pressure_en" sourceType="Custom" />
+            <DesignItem type="1" id="16" name="diastolic_blood_pressure_en" binding="diastolic_blood_pressure_en" description="diastolic_blood_pressure_en" text="diastolic_blood_pressure_en" sourceType="Custom" />
+            <DesignItem type="1" id="17" name="blood_oxygen_saturation_en" binding="blood_oxygen_saturation_en" description="blood_oxygen_saturation_en" text="blood_oxygen_saturation_en" sourceType="Custom" />
+            <DesignItem type="1" id="23" name="now" binding="now" description="now" text="now" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+</Report>
