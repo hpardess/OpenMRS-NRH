@@ -35,6 +35,21 @@ App ID:  referenceapplication.registrationapp.myRegisterPat
 						}
 					}
 				}]
+			},{
+				"legend": "Blood Group",
+				"fields": [{
+					"type": "personAttribute",
+					"label": "Blood Group",
+					"formFieldName": "bloodGroup",
+					"uuid": "d1fcbe8d-c97c-4754-9207-84f66acda0f3",
+					"widget": {
+						"providerName": "uicommons",
+						"fragmentId": "field/text",
+						"config": {
+							"size": 2
+						}
+					}
+				}]
 			}]
 		}, {
 			"id": "contactInfo",

@@ -181,6 +181,11 @@
 							<p>
 								<obs id="{n}-duration" conceptId="CIEL:159368" showUnits="days" labelText="Duration" />
 							</p>
+							
+							<p>
+								<obs id="{n}-comment" conceptId="CIEL:160632" labelText="Comment" />
+							</p>
+							
 							<span class="addRemoveButtons right" >
 								<i id="{n}-addEntry" class="addEntry icon-">&#xf055; Add</i>
 								<i id="{n}-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>

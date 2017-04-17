@@ -1,0 +1,6 @@
+1. Modified the Patient Registration Form
+2. changed coreapps module > encounter templates : added print buttons for each encounter and visit
+3. customized orderentry ui module
+4. customized common ui module with is related to orderentry ui module error
+5. customized the reference application module basic forms
+

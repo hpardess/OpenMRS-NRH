@@ -37,7 +37,7 @@
         </p>
         
         <p>
-            <obs conceptId="5096" labelText="Next appointment date" />
+            <obs conceptId="5096" labelText="Next appointment date" allowFutureDates="true" />
         </p>
         
     </section>
