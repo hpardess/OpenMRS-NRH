@@ -17,22 +17,49 @@ visit_note_encounter.encounter_datetime AS visit_note_datetime,
 (SELECT location.name FROM location WHERE location.location_id=visit_note_encounter.location_id LIMIT 1) AS visit_note_location,
 (SELECT clinic_note.value_text FROM obs AS clinic_note WHERE clinic_note.voided= 0 AND clinic_note.concept_id=162169 AND clinic_note.encounter_id=visit_note_encounter.encounter_id LIMIT 1) AS visit_note_clinic_note,
 
-(
-
-SELECT CONCAT_WS(', ', GROUP_CONCAT(UPPER(
-(SELECT `name` FROM `concept_name` WHERE `voided` = 0 AND `locale` IN ('en','fr') AND `concept_id` = `diags`.`value_coded`  AND `concept_name_type` = 'FULLY_SPECIFIED' ORDER BY `locale` DESC LIMIT 1)) SEPARATOR ', '),
-(SELECT GROUP_CONCAT(UPPER(`diags`.`value_text`) SEPARATOR ', ') FROM `obs` AS diags, `obs` AS diag_type WHERE `diags`.`concept_id` = 161602 AND `diags`.`encounter_id` = `visit_note_encounter`.`encounter_id` AND `diag_type`.`encounter_id` = `visit_note_encounter`.`encounter_id` AND `diags`.`voided` = 0 AND `diag_type`.`voided` = 0 AND `diags`.`obs_group_id` = `diag_type`.`obs_group_id` AND `diag_type`.`concept_id` = 159394 AND `diag_type`.`value_coded` = 160250
-)
-)
-FROM `obs` AS diags, `obs` AS diag_type WHERE `diags`.`concept_id` = 1284 AND `diags`.`encounter_id` = `visit_note_encounter`.`encounter_id` AND `diag_type`.`encounter_id` = `visit_note_encounter`.`encounter_id` AND `diags`.`voided` = 0 AND `diag_type`.`voided` = 0 AND `diags`.`obs_group_id` = `diag_type`.`obs_group_id` AND `diag_type`.`concept_id` = 159394 AND `diag_type`.`value_coded` = 160250
 
 
+(SELECT CONCAT_WS(', ', 
+(SELECT GROUP_CONCAT((SELECT `name` FROM `concept_name` 
+WHERE `voided` = 0 AND `locale` IN ('en','pa') AND `concept_id` = `diags`.`value_coded`  
+AND `concept_name_type` = 'FULLY_SPECIFIED' ORDER BY `locale` DESC LIMIT 1) SEPARATOR ', ')
+FROM `obs` AS diags, `obs` AS diag_class 
+WHERE `diags`.`concept_id` = 1284 
+AND `diags`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diag_class`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diags`.`voided` = 0 AND `diag_class`.`voided` = 0 
+AND `diags`.`obs_group_id` = `diag_class`.`obs_group_id` AND `diag_class`.`concept_id` = 159946 
+AND `diag_class`.`value_coded` = 159943),
 
+(SELECT GROUP_CONCAT( `diags`.`value_text` SEPARATOR ', ')
+FROM `obs` AS diags, `obs` AS diag_class 
+WHERE `diags`.`concept_id` = 161602 
+AND `diags`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diag_class`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diags`.`voided` = 0 AND `diag_class`.`voided` = 0 
+AND `diags`.`obs_group_id` = `diag_class`.`obs_group_id` AND `diag_class`.`concept_id` = 159946 
+AND `diag_class`.`value_coded` = 159943))) AS visit_note_primary_diagnoses,
 
+(SELECT CONCAT_WS(', ', 
+(SELECT GROUP_CONCAT((SELECT `name` FROM `concept_name` 
+WHERE `voided` = 0 AND `locale` IN ('en','pa') AND `concept_id` = `diags`.`value_coded`  
+AND `concept_name_type` = 'FULLY_SPECIFIED' ORDER BY `locale` DESC LIMIT 1) SEPARATOR ', ')
+FROM `obs` AS diags, `obs` AS diag_class 
+WHERE `diags`.`concept_id` = 1284 
+AND `diags`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diag_class`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diags`.`voided` = 0 AND `diag_class`.`voided` = 0 
+AND `diags`.`obs_group_id` = `diag_class`.`obs_group_id` AND `diag_class`.`concept_id` = 159946 
+AND `diag_class`.`value_coded` = 159944),
 
-) AS visit_note_primary_diagnoses,
-
- (1) as visit_note_secondary_diagnoses,
+(SELECT GROUP_CONCAT( `diags`.`value_text` SEPARATOR ', ')
+FROM `obs` AS diags, `obs` AS diag_class 
+WHERE `diags`.`concept_id` = 161602 
+AND `diags`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diag_class`.`encounter_id` = `visit_note_encounter`.`encounter_id` 
+AND `diags`.`voided` = 0 AND `diag_class`.`voided` = 0 
+AND `diags`.`obs_group_id` = `diag_class`.`obs_group_id` AND `diag_class`.`concept_id` = 159946 
+AND `diag_class`.`value_coded` = 159944))) as visit_note_secondary_diagnoses,
 
 NOW() AS NOW
 
