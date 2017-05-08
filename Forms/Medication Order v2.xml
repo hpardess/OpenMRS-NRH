@@ -1,4 +1,4 @@
-<htmlform formUuid="27c3fa40-a66a-4f58-946f-2af2bcab155a" formName="Medication Order v2" formEncounterType="f549375c-e5a0-4fac-bffd-42c5f7c325fc" formVersion="2.0">
+<htmlform formUuid="27c3fa40-a66a-4f58-946f-2af2bcab155a" formName="Medication Order" formEncounterType="f549375c-e5a0-4fac-bffd-42c5f7c325fc" formVersion="1.0">
 	<ifMode mode="VIEW" include="false">
 
 		<style type="text/css">
@@ -23,6 +23,10 @@
 	        i.removeEntry {
 	        	cursor: pointer;
 	        }
+	        
+	        #inner-table td {
+	        	border: none;
+	        }
 	    </style>
 
 		<script type="text/javascript">
@@ -31,6 +35,17 @@
 				$(".autoCompleteText").change(function (){
 					onchangeCustomFunction(this);
 				});
+				
+				jQuery("#weight-value").hide();
+				jQuery("#weight-null").hide();
+				var weight = jQuery(htmlform).find("#weight").text();
+				if (!(weight === "")) {
+					jQuery("#weight-value").show();
+					jQuery("#weight-null").hide();
+				}else {
+					jQuery("#weight-value").hide();
+					jQuery("#weight-null").show();
+				}
 			});
 
 			var toggleContainers = function() {
@@ -160,7 +175,7 @@
 			<template>
 				<tr id="{n}-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
 					<td>
-						<table>
+						<table id="inner-table">
 				        	<obsgroup groupingConceptId="160741">
 				        		<tr>
 						        	<td colspan="2">
