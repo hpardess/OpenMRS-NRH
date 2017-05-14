@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Logo" Left="350px" Top="17px" Width="123px" Height="103px" fontSize="16px" fontFamily="Arial" ExternalSource="moph_logo.jpg" />
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Regional Hospital" Left="257px" Top="113px" fontWeight="bold" fontSize="24px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Report" HelpText="Report" Left="383px" Top="148px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="HorizontalLine" Left="58px" Top="180px" Width="739px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="2px" />
+</Report>

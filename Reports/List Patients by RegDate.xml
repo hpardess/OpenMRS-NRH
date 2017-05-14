@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="850px" Height="1114px" backgroundColor="white" PageWidth="850" PageHeight="1114" PageMargin="50">
+    <Item WidgetType="Logo" Left="351px" Top="23px" Width="124px" Height="99px" fontSize="16px" fontFamily="Arial" ExternalSource="moph_logo.jpg" />
+    <Item WidgetType="Label" Text="Nangarhar Regional Hospital" HelpText="Nangarhar Regional Hospital" Left="255px" Top="122px" fontWeight="bold" fontSize="24px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Patients List" HelpText="Patients List" Left="375px" Top="167px" fontWeight="bold" fontSize="16px" fontFamily="Arial" />
+    <Item WidgetType="HorizontalLine" Left="60px" Top="194px" Width="731px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="2px" />
+    <Item WidgetType="HorizontalLine" Left="58px" Top="233px" Width="732px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="2px" />
+    <Item WidgetType="Label" Text="Reg No." HelpText="Reg No." Left="63px" Top="206px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Reg Date" HelpText="Reg Date" Left="156px" Top="206px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Name" HelpText="Name" Left="265px" Top="205px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Age" HelpText="Age" Left="746px" Top="204px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Gender" HelpText="Gender" Left="666px" Top="204px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Father Name" HelpText="Father Name" Left="465px" Top="204px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <XPos>
+        <Item ID="5" XPOS="156px" YPOS="241px" Binding="register_date" Text="register_date" HelpText="register_date" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="9" XPOS="674px" YPOS="241px" Binding="gender" Text="gender" HelpText="gender" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="10" XPOS="460px" YPOS="241px" Binding="fathername" Text="fathername" HelpText="fathername" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="13" XPOS="58px" YPOS="241px" Binding="reg_nos" Text="reg_nos" HelpText="reg_nos" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="14" XPOS="266px" YPOS="241px" Binding="fullname" Text="fullname" HelpText="fullname" color="Black" fontSize="14px" fontFamily="Arial" />
+        <Item ID="15" XPOS="751px" YPOS="241px" Binding="age" Text="age" HelpText="age" color="Black" fontSize="14px" fontFamily="Arial" />
+    </XPos>
+    <DesignItems>
+        <DesignItem type="0" id="1" name="List All Patients filter by reg_date" binding="List-All-Patients-filter-by-reg_date" description="List All Patients filter by on regdate. Also active and retired option" sourceType="Grouping">
+            <DesignItem type="2" id="13" name="reg_nos" binding="reg_nos" description="reg_nos" text="reg_nos" sourceType="Custom" />
+            <DesignItem type="1" id="2" name="identifier1" binding="identifier1" description="identifier1" text="identifier1" sourceType="Custom" />
+            <DesignItem type="1" id="3" name="identifier2" binding="identifier2" description="identifier2" text="identifier2" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="identifier3" binding="identifier3" description="identifier3" text="identifier3" sourceType="Custom" />
+            <DesignItem type="2" id="5" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="given_name" binding="given_name" description="given_name" text="given_name" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="family_name" binding="family_name" description="family_name" text="family_name" sourceType="Custom" />
+            <DesignItem type="2" id="14" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="2" id="9" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="2" id="15" name="age" binding="age" description="age" text="age" sourceType="Custom" />
+            <DesignItem type="2" id="10" name="fathername" binding="fathername" description="fathername" text="fathername" sourceType="Custom" />
+            <DesignItem type="1" id="16" name="mothername" binding="mothername" description="mothername" text="mothername" sourceType="Custom" />
+            <DesignItem type="1" id="11" name="address" binding="address" description="address" text="address" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+</Report>

@@ -1,0 +1,214 @@
+<htmlform formUuid="e0a8da1c-c999-4e75-a419-861ababe40d1" formName="Lab Test Orders" formEncounterType="4ae23f35-63cf-4b47-a1e9-6e80005613e1" formVersion="1.0">
+	<ifMode mode="VIEW" include="false">
+
+		<style type="text/css">
+	        #who-when-where {
+	            margin-bottom: 6px;
+	            border-bottom: 1px solid #ccc;
+	        }
+
+	        #who-when-where p {
+	            display: inline-block;
+	            padding-right: 20px;
+	        }
+
+	        #where > input[type=text] {
+	            display: inline-block;
+	        }
+
+	        i.addEntry {
+	        	cursor: pointer;
+	        }
+
+	        i.removeEntry {
+	        	cursor: pointer;
+	        }
+	        
+	        #inner-table td {
+	        	border: none;
+	        }
+	    </style>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				toggleContainers();
+				$(".autoCompleteText").change(function (){
+					onchangeCustomFunction(this);
+				});
+				
+				jQuery("#weight-value").hide();
+				jQuery("#weight-null").hide();
+				var weight = jQuery(htmlform).find("#weight").text();
+				if (!(weight === "")) {
+					jQuery("#weight-value").show();
+					jQuery("#weight-null").hide();
+				}else {
+					jQuery("#weight-value").hide();
+					jQuery("#weight-null").show();
+				}
+			});
+
+			var toggleContainers = function() {
+				$(".toggleContainer").each(function (index, toggleContainer) {
+					// checks if this toggleContainer is the first of its block
+					if(!($(toggleContainer).prev().attr("templateBlockId") == $(toggleContainer).attr("templateBlockId") )) {
+						$(toggleContainer).show();
+						$(toggleContainer).find(".removeEntry").remove();
+					}
+
+					// checks if this toggleContainer is the last
+					if(!($(toggleContainer).next().attr("templateBlockId") == $(toggleContainer).attr("templateBlockId") )) {
+						$(toggleContainer).find(".addEntry").remove();
+					}
+					
+					// if the obs is not empty, show the field 
+					if (!(getValue(parseFloat(toggleContainer.id)+".value") == "") || (getValue(parseFloat(toggleContainer.id)+".value") == null) ) {
+						$(toggleContainer).show();
+						
+						// if the next obs is not empty, hide buttons
+						if (!(getValue(parseFloat($(toggleContainer).next().attr("id"))+".value") == "")) {
+							$(toggleContainer).find(".addEntry").hide();
+							$(toggleContainer).find(".removeEntry").hide();
+						}
+					}
+				});
+
+				$('i.addEntry').click(function(){
+					// allow Add only if one field is NOT empty
+					var currentAddEntry = $(this);
+					var addContainer = 0;
+					$(currentAddEntry).closest(".toggleContainer").find("input").each( function (index, currentInput) {
+						if (!($(currentInput).val() == "")) {
+							// handle checkbox fields
+							if ($(currentInput).attr('type') == "checkbox") {
+								if($(currentInput).prop("checked") == true) {
+									addContainer = addContainer + 1;
+								}
+							} else {
+								addContainer = addContainer + 1;
+							}
+						}
+					});
+					// handle drop down lists
+					$(currentAddEntry).closest(".toggleContainer").find("select").each( function (index, currentSelect) {
+						if (!($(currentSelect).find(":selected").text() == "")) {
+							addContainer = addContainer + 1;
+						}
+					});
+					if (addContainer > 0) {
+						$(currentAddEntry).hide();
+						$(currentAddEntry).closest(".toggleContainer").find(".removeEntry").hide();
+						$(currentAddEntry).closest(".toggleContainer").next().show();		
+					}
+					return false;
+				});
+
+				$('i.removeEntry').click(function(){
+					// do not allow Remove if fields have a value	
+					var currentRemoveEntry = $(this);
+					var removeContainer = 0;
+
+					$(currentRemoveEntry).closest(".toggleContainer").find("input").each( function (index, currentInput) {
+						if (!($(currentInput).val() == "")) {
+							// handle checkbox fields
+							if ($(currentInput).attr('type') == "checkbox") {
+								if($(currentInput).prop("checked") == true) {
+									removeContainer = removeContainer + 1;
+								}
+							} else {
+								removeContainer = removeContainer + 1;
+							}
+						}
+					});
+					// handle drop down lists
+					$(currentRemoveEntry).closest(".toggleContainer").find("select").each( function (index, currentSelect) {
+						if (!($(currentSelect).find(":selected").text() == "")) {
+							removeContainer = removeContainer + 1;
+						}
+					});
+					if (removeContainer == 0) {
+						$(currentRemoveEntry).closest(".toggleContainer").hide();
+						$(currentRemoveEntry).closest(".toggleContainer").prev().find(".addEntry").show();
+						$(currentRemoveEntry).closest(".toggleContainer").prev().find(".removeEntry").show();
+					}
+					return false;
+				});
+			}
+
+
+			function onchangeCustomFunction(element) {
+				if(!(typeof $(element) == "undefined")) {
+					var hiddenValue = $(element).closest("span").find("#"+$(element).attr("id")+"_hid").val();
+					//console.log("hiddenValue: " + hiddenValue);
+					if ( !((hiddenValue == "ERROR") || (hiddenValue == ""))) {
+						// setValue($(element).closest("span").attr("id")+"-opt1.value", defaultMedicationCalssification );
+					} else {
+						//console.log("in else");
+						setValue($(element).closest("span").attr("id")+"-opt1.value", "" );
+					}
+				}
+			}
+		</script>
+	</ifMode>
+
+	<ifMode mode="VIEW" include="false">
+        <h2>Medication Order</h2>
+
+        <div id="who-when-where">
+            <p id="who">
+                <label><uimessage code="coreapps.patientDashBoard.provider"/></label>
+                <span><encounterProvider default="currentUser" required="true"  /></span>
+            </p>
+            <p id="when">
+                <label><uimessage code="coreapps.patientDashBoard.location"/></label>
+                <span><encounterLocation default="SessionAttribute:emrContext.sessionLocationId"/></span>
+            </p>
+            <p id="where">
+                <label><uimessage code="coreapps.patientDashBoard.date"/></label>
+                <span><encounterDate id="encounterDate" default="now" showTime="true"/></span>
+            </p>
+        </div>
+    </ifMode>
+
+	<table>
+		<repeat>
+			<template>
+				<tr id="{n}-toggleContainer" templateBlockId="medication" class="toggleContainer"  style="display:none; border: aliceblue; border-width: thin; border-style: groove; padding: 5px;">
+					<td>
+						<table id="inner-table">
+			        		<tr>
+					        	<td colspan="2">
+									<obs id="{n}" conceptId="CIEL:1271" answerClasses="Drug" style="autocomplete" size="10" labelText="Lab Test order"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="addRemoveButtons right" >
+										<i id="{n}-addEntry" class="addEntry icon-">&#xf055; Add</i>
+										<i id="{n}-removeEntry" class="removeEntry icon-">   &#xf056; Remove</i>
+									</span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</template>
+			<render n="1"/>
+			<render n="2"/>
+			<render n="3"/>
+			<render n="4"/>
+			<render n="5"/>
+			<render n="6"/>
+			<render n="7"/>
+			<render n="8"/>
+			<render n="9"/>
+			<render n="10"/>
+		</repeat>
+		<tr>
+			<td>
+				<obs id="comment" conceptId="CIEL:160632" labelText="Comment" />
+			</td>
+		</tr>
+	</table>
+	<submit/>
+</htmlform>

@@ -1,3 +1,4 @@
+SELECT * FROM (
 (SELECT 
 (SELECT `name` FROM `concept_name` 
 WHERE `voided` = 0 AND `locale` IN ('en','pa') AND `concept_id` = diagnose.`value_coded`  
@@ -52,3 +53,4 @@ AND patient_identifier.identifier_type=3
 AND patient_identifier.patient_id = visit_note_encounter.patient_id
 GROUP BY DiagnoseName
 ORDER BY DiagnoseName ASC)
+) t

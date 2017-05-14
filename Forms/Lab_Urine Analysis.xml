@@ -1,4 +1,4 @@
-<htmlform formUuid="d1bc3cf0-3e9e-45b9-9a85-1bf20e043dd1" formName="Stool Examination" formEncounterType="8eb0cfb5-510d-4076-8bd9-eb3597ac7a34" formVersion="1.0">
+<htmlform formUuid="83528bef-5be4-4290-aeb0-1b8424799a73" formName="Urine Analysis" formEncounterType="4fbe52dd-ff5d-4259-a770-7a75e5bb94b0" formVersion="1.0">
 
     <style type="text/css">
         #who-when-where {
@@ -54,7 +54,7 @@
     </style>
 
     <ifMode mode="VIEW" include="false">
-        <h2>Stool Examination</h2>
+        <h2>Urine Analysis</h2>
 
         <div id="who-when-where">
             <p id="who">
@@ -76,15 +76,15 @@
         <table>
             <tr>
                 <td colspan="2" class="center-content">
-                    <lable class="sub-title">PHYSICAL EXAMINATION</lable>
+                    <lable class="sub-title">PHYSICAL EXAMES</lable>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:163641" labelText="Color of stool"/>
+                    <obs conceptId="CIEL:162106" labelText="Urine color"/>
                 </td>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Color (Text)" />
+                    <obs conceptId="CIEL:160632" labelText="Urine Color (Text)" />
                 </td>
             </tr>
             <tr>
@@ -94,57 +94,89 @@
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Consistency"/>
+                    <obs conceptId="CIEL:160632" labelText="Appearance"/>
                 </td>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Mucus" />
+                    <obs conceptId="CIEL:160632" labelText="Specific Gravity" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="center-content">
-                    <lable class="sub-title">PROTOZOA</lable>
+                    <lable class="sub-title">CHEMCAL EXAMINATION</lable>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="E.A. Histolytica"/>
+                    <obs conceptId="CIEL:160632" labelText="Protin"/>
                 </td>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Girdia Lamblia" />
+                    <obs conceptId="CIEL:161444" labelText="Urine bile salt test" />
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Entaameobia"/>
+                    <obs conceptId="CIEL:160632" labelText="Gulucose"/>
                 </td>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Othere" />
+                    <obs conceptId="CIEL:163680" labelText="Bilirubin total presence in urine by test strip" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <obs conceptId="CIEL:161438" labelText="Urine PH"/>
+                </td>
+                <td>
+                    <obs conceptId="CIEL:163682" labelText="Urobilinogen presence in urine test" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <obs conceptId="CIEL:161442" labelText="Urine Ketone Test"/>
+                </td>
+                <td>
+                    <obs conceptId="CIEL:160632" labelText="Others" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="center-content">
-                    <lable class="sub-title">HELMINTHS (WARMS)</lable>
+                    <lable class="sub-title">MICROSCOPICAL EXAMES</lable>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Taenia Signata"/>
+                    <obs conceptId="CIEL:163693" labelText="Leukocyte casts (W.B.C) urine test"/>
                 </td>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Entrobious Vermicolaris" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs conceptId="CIEL:160632" labelText="Hyminolepis Name"/>
-                </td>
-                <td>
-                    <obs conceptId="CIEL:160632" labelText="Trichuris Trichuria" />
+                    <obs conceptId="CIEL:163688" labelText="Spore presence in urine test" />
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Ancyclotoma Duldental"/>
+                    <obs conceptId="CIEL:163683" labelText="Red Cells (R.B.C) Test"/>
+                </td>
+                <td>
+                    <obs conceptId="CIEL:160735" labelText="Bacteriuria test" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <obs conceptId="CIEL:163692" labelText="Epithelial casts urine test"/>
+                </td>
+                <td>
+                    <obs conceptId="CIEL:163686" labelText="Yeast Urine Test" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <obs conceptId="CIEL:160632" labelText="Mucus"/>
+                </td>
+                <td>
+                    <obs conceptId="CIEL:163689" labelText="Trichomonas vaginalis presence in urine sediment by light microscopy" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <obs conceptId="CIEL:163696" labelText="Casts presence in urine sediment by light microscopy test"/>
                 </td>
                 <td>
                     <obs conceptId="CIEL:160632" labelText="Schistosoma Eggs" />
@@ -152,32 +184,17 @@
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Asicris Lumbricoides"/>
-                </td>
-                <td>
-                    <obs conceptId="CIEL:160632" labelText="Bacteria" />
+                    <obs conceptId="CIEL:163695" labelText="Crystal Urine Test"/>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <table>
-                        <tr>
-                            <td>
-                                <obs conceptId="CIEL:160632" labelText="Waxdrop"/>
-                            </td>
-                            <td>
-                                <obs conceptId="CIEL:160632" labelText="Puscells and R.B.C" />
-                            </td>
-                            <td>
-                                <obs conceptId="CIEL:160632" labelText="Segment of Tanis" />
-                            </td>
-                        </tr>
-                    </table>
+                    <obs conceptId="CIEL:45" labelText="URINE PREGNANCY TEST"/>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="CIEL:160632" labelText="Lab Comment"/>
+                    <obs conceptId="CIEL:160987" labelText="Urine test result"/>
                 </td>
             </tr>
         </table>
